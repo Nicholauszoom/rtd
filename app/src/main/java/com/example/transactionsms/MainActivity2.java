@@ -39,8 +39,6 @@ public class MainActivity2 extends AppCompatActivity {
     private final String SERVER ="https://solutionscode.000webhostapp.com/save_sms0.php";
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

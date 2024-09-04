@@ -1,0 +1,36 @@
+<!-- item_category.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/category_card_background"
+    android:elevation="4dp"
+    android:padding="16dp"
+    android:layout_marginEnd="8dp">
+
+    <LinearLayout
+        android:id="@+id/categoryLinearLayout"
+        android:layout_width="146dp"
+        android:layout_height="126dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/categoryLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:src="@drawable/placeholder_logo" />
+
+        <TextView
+            android:id="@+id/categoryCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/grey"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

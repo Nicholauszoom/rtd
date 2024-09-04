@@ -68,14 +68,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Read" />
+            android:text="Upload" />
 
         <Button
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Send" />
+            android:text="Tranfer"/>
     </LinearLayout>
     <SearchView
         android:id="@+id/searchView"
@@ -87,5 +87,6 @@
         android:id="@+id/lvSMS"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 </LinearLayout>
