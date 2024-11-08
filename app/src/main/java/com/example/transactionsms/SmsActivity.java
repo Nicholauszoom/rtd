@@ -85,7 +85,6 @@ public class SmsActivity extends AppCompatActivity {
             return response;
         }
 
-
         @Override
         protected void onPostExecute(String response) {
             if (response != null) {
@@ -117,21 +116,28 @@ public class SmsActivity extends AppCompatActivity {
                             }
                         }
 
-                        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                        Date recordDate = df.parse(ddate);
-                        ddate = df.format(recordDate);
-                        Date sentDate = df.parse(dateSent);
-                        dateSent = df.format(sentDate);
+                        if (phone.equals("AirtelMoney")) {
+                            try {
+                                DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                                Date recordDate = df.parse(ddate);
+                                ddate = df.format(recordDate);
+                                Date sentDate = df.parse(dateSent);
+                                dateSent = df.format(sentDate);
 
-                        String str = "SMS from: " + phone + "\n" + msg;
-                        str += "\nDate: " + ddate;
-                        str += "\nDate Sent: " + dateSent;
+                                String str = "SMS from: " + phone + "\n" + msg;
+                                str += "\nDate: " + ddate;
+                                str += "\nDate Sent: " + dateSent;
 
-                        smsList.add(str);
+                                smsList.add(str);
+                            }catch (ParseException e){
+                                Log.e("FetchSmsTask", "Error parsing date: " + e.getMessage());
+                                Toast.makeText(SmsActivity.this, "Error parsing date", Toast.LENGTH_SHORT).show();
+                            }
+                        }
                     }
 
                     adapter.notifyDataSetChanged();
-                } catch (ParseException e) {
+                } catch (Exception e) {
                     Log.e("FetchSmsTask", "Error parsing date: " + e.getMessage());
                     Toast.makeText(SmsActivity.this, "Error parsing date", Toast.LENGTH_SHORT).show();
                 }
