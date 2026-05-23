@@ -3,6 +3,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#FF5722</color>
-    <color name="red">#80FB0911</color>
+    <color name="red">#BC040A</color>
     <color name="grey">#AC373434</color>
+    <color name="green">#109E15</color>
+    <color name="pupple">#D5673AB7</color>
+    <color name="material_dynamic_neutral20">#282928</color>
+    <color name="material_dynamic_neutral95">#F1F1F3</color>
+    <color name="teal">#008080</color>
+    <color name="dark_blue">#00274D</color>
+    <color name="light_aqua">#66D1E8</color>
+    <color name="grayish_blue">#A0BECF</color>
+
 </resources>
